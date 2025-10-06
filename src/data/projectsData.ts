@@ -234,9 +234,7 @@ export const projectsData: Record<string, ProjectData> = {
       'UptimeRobot for availability'
     ],
     pipeline: [
-      'Blue-green deployment strategy',
       'Automated migration scripts',
-      'POC validation phase',
       'Gradual rollout per application',
       'Automated rollback capability'
     ],
