@@ -313,155 +313,151 @@ export const projectsData: Record<string, ProjectData> = {
   'wordpress-pipeline': {
     id: 'wordpress-pipeline',
     title: {
-      en: 'WordPress Site Deployment Pipeline',
-      fr: 'Pipeline de Déploiement WordPress'
+      en: 'Cloud Native DevOps Platform',
+      fr: 'Plateforme DevOps Cloud Native'
     },
     context: {
-      en: 'Complete end-to-end deployment pipeline for WordPress sites at Citeo, from initial conception to production deployment. Includes Docker containerization, Azure DevOps CI/CD, Infrastructure as Code with Terraform, automated testing, and blue-green deployment strategy.',
-      fr: 'Pipeline complet de bout en bout pour le déploiement de sites WordPress chez Citeo, de la conception initiale au déploiement en production. Inclut conteneurisation Docker, CI/CD Azure DevOps, Infrastructure as Code avec Terraform, tests automatisés et stratégie de déploiement blue-green.'
+      en: 'Complete cloud-native DevOps architecture evolving through 8 phases from a monolith to a containerized solution with EKS, GitOps CI/CD pipeline, ELK Stack monitoring and automated multi-environment management. Academic M2 project for student records management application.',
+      fr: 'Architecture DevOps cloud native complète évoluant en 8 phases d\'un monolithe vers une solution containerisée avec EKS, pipeline CI/CD GitOps, monitoring ELK Stack et gestion multi-environnements automatisée. Projet académique M2 pour application de gestion des dossiers étudiants.'
     },
     objectives: {
       en: [
-        'Standardize WordPress deployment process',
-        'Implement blue-green deployment pattern',
-        'Automate testing and security scans',
-        'Reduce deployment time by 70%',
-        'Enable rapid rollback capability',
-        'Ensure consistent environments (dev/staging/prod)'
+        'Migrate from monolithic to cloud native architecture',
+        'Implement complete CI/CD pipeline with GitOps',
+        'Deploy multi-environment infrastructure with Terraform',
+        'Set up centralized monitoring with ELK Stack',
+        'Ensure scalability and high availability'
       ],
       fr: [
-        'Standardiser le processus de déploiement WordPress',
-        'Implémenter le pattern de déploiement blue-green',
-        'Automatiser les tests et scans de sécurité',
-        'Réduire le temps de déploiement de 70%',
-        'Activer capacité de rollback rapide',
-        'Garantir cohérence des environnements (dev/staging/prod)'
+        'Migrer d\'une architecture monolithique vers une solution cloud native',
+        'Implémenter une pipeline CI/CD complète avec GitOps',
+        'Déployer une infrastructure multi-environnements avec Terraform',
+        'Mettre en place un monitoring centralisé avec la stack ELK',
+        'Assurer la scalabilité et la haute disponibilité'
       ]
     },
     challenges: {
       en: [
-        'WordPress-specific containerization',
-        'Database migration between environments',
-        'Media storage synchronization',
-        'Plugin compatibility testing',
-        'Environment-specific configurations',
-        'Blue-green traffic switching'
+        'Progressive migration without service interruption',
+        'Multi-environment secrets management with AWS Secrets Manager',
+        'Deployment orchestration with ArgoCD and GitLab CI',
+        'Distributed monitoring configuration with ELK Stack',
+        'Load and security testing automation'
       ],
       fr: [
-        'Conteneurisation spécifique WordPress',
-        'Migration base de données entre environnements',
-        'Synchronisation du stockage média',
-        'Tests de compatibilité des plugins',
-        'Configurations spécifiques par environnement',
-        'Basculement de trafic blue-green'
+        'Migration progressive sans interruption de service',
+        'Gestion des secrets multi-environnements avec AWS Secrets Manager',
+        'Orchestration des déploiements avec ArgoCD et GitLab CI',
+        'Configuration du monitoring distribué avec ELK Stack',
+        'Automatisation des tests de charge et de sécurité'
       ]
     },
-    duration: '3 mois',
-    startDate: '01/2024',
-    endDate: '03/2024',
+    duration: '4 mois',
+    startDate: '09/2023',
+    endDate: '01/2024',
     team: [
-      { role: 'DevOps Engineer', count: '1' },
-      { role: 'WordPress Developers', count: '2' },
-      { role: 'QA Engineer', count: '1' }
+      { role: 'DevOps Engineer', count: '1' }
     ],
     infrastructure: [
-      'Azure Container Apps',
-      'Azure MySQL Flexible Server',
-      'Azure Storage (media files)',
-      'Azure Application Gateway',
-      'Azure Container Registry'
+      'Amazon EKS (multi-AZ worker nodes)',
+      'Amazon RDS MySQL (Multi-AZ in production)',
+      'Dedicated VPC per environment (public/private subnets)',
+      'Application Load Balancer with health checks',
+      'Amazon ECR for Docker images',
+      'AWS Secrets Manager per environment',
+      'Dedicated EC2 instance for ELK Stack'
     ],
     mainTech: [
-      'WordPress (PHP/MySQL)',
-      'Docker & Docker Compose',
-      'Nginx web server',
-      'PHP-FPM',
-      'WP-CLI for automation'
+      'Docker & Kubernetes',
+      'ArgoCD for GitOps',
+      'GitLab CI/CD',
+      'Helm charts',
+      'Auto Scaling',
+      'Node.js & Express.js (REST API)',
+      'Terraform for Infrastructure as Code'
     ],
     observability: [
-      'Application Insights',
-      'Elasticsearch for logs',
-      'Grafana dashboards',
-      'UptimeRobot monitoring',
-      'Custom alerting via Teams'
+      'ELK Stack (Elasticsearch, Logstash, Kibana)',
+      'Filebeat for log forwarding',
+      'Automated load testing (1000 concurrent requests)',
+      'Real-time monitoring dashboards'
     ],
     pipeline: [
-      'Git branching strategy',
-      'Automated builds on commit',
-      'SonarQube code quality scans',
-      'Security vulnerability scanning',
-      'Automated deployment to dev',
-      'Manual approval for prod',
-      'Blue-green traffic switch'
+      '8-phase progressive evolution',
+      'GitLab CI/CD with automated testing',
+      'Automated deployments to dev',
+      'Manual approvals for production',
+      'GitOps with ArgoCD synchronization',
+      'Automated security testing'
     ],
     metrics: [
-      { label: { en: 'Deployment time reduction', fr: 'Réduction temps déploiement' }, value: '-70%' },
-      { label: { en: 'Deployment frequency', fr: 'Fréquence déploiements' }, value: '2-3/week' },
-      { label: { en: 'Rollback time', fr: 'Temps de rollback' }, value: '< 5min' },
-      { label: { en: 'Deployment success rate', fr: 'Taux succès déploiements' }, value: '98%' }
+      { label: { en: 'Load test requests', fr: 'Requêtes test de charge' }, value: '1000+' },
+      { label: { en: 'Managed environments', fr: 'Environnements gérés' }, value: '3' },
+      { label: { en: 'Evolution phases', fr: 'Phases d\'évolution' }, value: '8' },
+      { label: { en: 'Target availability', fr: 'Disponibilité cible' }, value: '99.9%' }
     ],
     benefits: {
       en: [
-        'Rapid and reliable deployments',
-        'Zero-downtime updates with blue-green',
-        'Consistent environments across stages',
-        'Fast incident recovery',
-        'Developer productivity increase',
-        'Reduced human errors'
+        'Complete deployment automation with validation in dev',
+        'Native Kubernetes auto-scaling replacing EC2 groups',
+        'Centralized observability with real-time ELK monitoring',
+        'Reproducible infrastructure with Terraform multi-environment',
+        'Enhanced security with centralized secrets management'
       ],
       fr: [
-        'Déploiements rapides et fiables',
-        'Mises à jour sans interruption (blue-green)',
-        'Environnements cohérents entre étapes',
-        'Récupération rapide en cas d\'incident',
-        'Augmentation productivité développeurs',
-        'Réduction des erreurs humaines'
+        'Automatisation complète avec validation en dev',
+        'Auto-scaling Kubernetes natif remplaçant les groupes EC2',
+        'Observabilité centralisée avec monitoring temps réel ELK',
+        'Infrastructure reproductible avec Terraform multi-environnements',
+        'Sécurité renforcée avec gestion centralisée des secrets'
       ]
     },
     technicalValue: {
       en: [
-        'Modern CI/CD pipeline architecture',
-        'GitOps principles implementation',
+        'Cloud-native architecture patterns',
+        'GitOps deployment methodology',
         'Infrastructure as Code maturity',
-        'DevOps best practices'
+        'Kubernetes orchestration in production'
       ],
       fr: [
-        'Architecture moderne de pipeline CI/CD',
-        'Implémentation des principes GitOps',
+        'Patterns d\'architecture cloud-native',
+        'Méthodologie de déploiement GitOps',
         'Maturité Infrastructure as Code',
-        'Meilleures pratiques DevOps'
+        'Orchestration Kubernetes en production'
       ]
     },
     technicalLearnings: {
       en: [
-        'WordPress containerization patterns',
-        'Blue-green deployment implementation',
-        'Azure DevOps advanced features',
-        'Multi-stage pipeline design',
-        'Environment management strategies'
+        'Amazon EKS Kubernetes orchestration in production',
+        'GitOps pattern implementation with ArgoCD',
+        'Multi-environment Infrastructure as Code with Terraform',
+        'Advanced CI/CD pipeline configuration with automated testing',
+        'Complete monitoring stack setup (ELK)',
+        'AWS services integration for cloud native architecture'
       ],
       fr: [
-        'Patterns de conteneurisation WordPress',
-        'Implémentation déploiement blue-green',
-        'Fonctionnalités avancées Azure DevOps',
-        'Conception pipeline multi-étapes',
-        'Stratégies de gestion d\'environnements'
+        'Maîtrise de l\'orchestration Kubernetes en production avec Amazon EKS',
+        'Implémentation du pattern GitOps avec ArgoCD pour le déploiement continu',
+        'Gestion de l\'Infrastructure as Code multi-environnements avec Terraform',
+        'Configuration avancée de pipelines CI/CD avec tests automatisés',
+        'Mise en place d\'une stack de monitoring complète (ELK)',
+        'Intégration des services AWS pour une architecture cloud native'
       ]
     },
     methodologicalLearnings: {
       en: [
-        'Continuous Integration/Deployment practices',
-        'Automated testing strategies',
-        'Release management process',
-        'Collaboration between Dev and Ops',
-        'Documentation as code'
+        'Progressive phase-by-phase evolution approach',
+        'Academic project management',
+        'Architecture migration without interruption',
+        'Testing and validation at each phase',
+        'Infrastructure automation best practices'
       ],
       fr: [
-        'Pratiques Intégration/Déploiement continu',
-        'Stratégies de tests automatisés',
-        'Processus de gestion des releases',
-        'Collaboration entre Dev et Ops',
-        'Documentation as code'
+        'Approche par phases d\'évolution progressive',
+        'Gestion de projet académique',
+        'Migration d\'architecture sans interruption',
+        'Tests et validation à chaque phase',
+        'Meilleures pratiques d\'automatisation d\'infrastructure'
       ]
     }
   },
