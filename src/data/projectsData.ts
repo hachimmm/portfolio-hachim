@@ -209,9 +209,7 @@ export const projectsData: Record<string, ProjectData> = {
     startDate: '02/2024',
     endDate: '06/2024',
     team: [
-      { role: 'DevOps Engineers', count: '2' },
-      { role: 'Cloud Architect', count: '1' },
-      { role: 'Application Teams', count: '3' }
+      { role: 'DevOps Engineer', count: '1' }
     ],
     infrastructure: [
       'Azure Container Apps (destination)',
