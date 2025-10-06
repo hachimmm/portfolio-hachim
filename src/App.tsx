@@ -16,7 +16,7 @@ const App = () => (
       <LanguageProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={import.meta.env.PROD ? "/portfolio" : "/"}>
+        <BrowserRouter basename={import.meta.env.PROD ? "/portfolio-hachim" : "/"}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/documentation/:projectId" element={<Documentation />} />
