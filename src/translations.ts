@@ -20,32 +20,32 @@ export const translations = {
     },
     projects: {
       title: "Featured Projects",
-      subtitle: "A showcase of my recent DevOps implementations",
+      subtitle: "Professional DevOps projects at Citeo - Pioneering circular economy",
       code: "Code",
       demo: "Documentation",
       project1: {
-        title: "Kubernetes Multi-Cluster Management",
-        description: "Automated deployment and management system for multiple Kubernetes clusters across different cloud providers using ArgoCD and Terraform."
+        title: "WordPress Updates Monitoring System",
+        description: "Automated surveillance system for WordPress core and plugin updates with real-time Teams notifications. Deployed across production environments using containerized cron jobs."
       },
       project2: {
-        title: "CI/CD Pipeline Automation",
-        description: "Comprehensive CI/CD pipeline with automated testing, security scanning, and multi-environment deployments using GitLab CI and Jenkins."
+        title: "Azure Container Apps Migration",
+        description: "Strategic migration of 10+ WordPress applications from Azure Web Apps to Azure Container Apps, improving log aggregation, scalability, and reducing operational costs by 30%."
       },
       project3: {
-        title: "Infrastructure Monitoring Platform",
-        description: "Complete monitoring solution with Prometheus, Grafana, and custom dashboards for real-time infrastructure health tracking."
+        title: "WordPress Site Deployment Pipeline",
+        description: "End-to-end WordPress deployment pipeline from conception to production using Docker, Azure DevOps, and Infrastructure as Code with automated testing and blue-green deployments."
       },
       project4: {
-        title: "Serverless Microservices Architecture",
-        description: "Scalable microservices deployment on AWS Lambda with API Gateway, DynamoDB, and automated scaling policies."
+        title: "Infrastructure as Code with Terraform",
+        description: "Complete Azure infrastructure automation using Terraform for multi-environment deployments (dev, staging, prod), managing Container Apps, databases, storage, and networking."
       },
       project5: {
-        title: "Security Hardening Automation",
-        description: "Automated security compliance and vulnerability scanning system integrated into the deployment pipeline."
+        title: "CI/CD Pipeline with Azure DevOps",
+        description: "Comprehensive CI/CD pipelines using Azure DevOps and YAML configurations for automated builds, security scans with SonarQube, and deployments across multiple environments."
       },
       project6: {
-        title: "Log Aggregation System",
-        description: "Centralized logging infrastructure using ELK Stack for collecting, analyzing, and visualizing application logs."
+        title: "Observability Stack with ELK & Grafana",
+        description: "Centralized monitoring and logging infrastructure using Elasticsearch, Grafana, and UptimeRobot for real-time application performance tracking and incident alerting via Teams."
       }
     },
     contact: {
@@ -114,32 +114,32 @@ export const translations = {
     },
     projects: {
       title: "Projets Principaux",
-      subtitle: "Une vitrine de mes récentes implémentations DevOps",
+      subtitle: "Projets DevOps professionnels chez Citeo - Pionnier de l'économie circulaire",
       code: "Code",
       demo: "Documentation",
       project1: {
-        title: "Gestion Multi-Cluster Kubernetes",
-        description: "Système de déploiement et de gestion automatisé pour plusieurs clusters Kubernetes sur différents fournisseurs cloud utilisant ArgoCD et Terraform."
+        title: "Système de Surveillance WordPress",
+        description: "Système automatisé de surveillance des mises à jour WordPress et plugins avec notifications Teams en temps réel. Déployé en production via des cron jobs conteneurisés."
       },
       project2: {
-        title: "Automatisation de Pipeline CI/CD",
-        description: "Pipeline CI/CD complet avec tests automatisés, analyse de sécurité et déploiements multi-environnements utilisant GitLab CI et Jenkins."
+        title: "Migration Azure Container Apps",
+        description: "Migration stratégique de 10+ applications WordPress d'Azure Web Apps vers Azure Container Apps, améliorant l'agrégation des logs, la scalabilité et réduisant les coûts de 30%."
       },
       project3: {
-        title: "Plateforme de Surveillance d'Infrastructure",
-        description: "Solution de surveillance complète avec Prometheus, Grafana et tableaux de bord personnalisés pour le suivi de la santé de l'infrastructure en temps réel."
+        title: "Pipeline de Déploiement WordPress",
+        description: "Pipeline de déploiement WordPress de bout en bout, de la conception à la production avec Docker, Azure DevOps, et Infrastructure as Code avec tests automatisés et déploiements blue-green."
       },
       project4: {
-        title: "Architecture Microservices Serverless",
-        description: "Déploiement de microservices évolutifs sur AWS Lambda avec API Gateway, DynamoDB et politiques de mise à l'échelle automatique."
+        title: "Infrastructure as Code avec Terraform",
+        description: "Automatisation complète de l'infrastructure Azure avec Terraform pour déploiements multi-environnements (dev, staging, prod), gérant Container Apps, bases de données, stockage et réseau."
       },
       project5: {
-        title: "Automatisation du Renforcement de la Sécurité",
-        description: "Système automatisé de conformité de sécurité et d'analyse de vulnérabilités intégré dans le pipeline de déploiement."
+        title: "Pipeline CI/CD avec Azure DevOps",
+        description: "Pipelines CI/CD complets utilisant Azure DevOps et configurations YAML pour builds automatisés, scans de sécurité avec SonarQube, et déploiements multi-environnements."
       },
       project6: {
-        title: "Système d'Agrégation de Logs",
-        description: "Infrastructure de journalisation centralisée utilisant ELK Stack pour collecter, analyser et visualiser les logs d'applications."
+        title: "Stack d'Observabilité ELK & Grafana",
+        description: "Infrastructure centralisée de monitoring et logging avec Elasticsearch, Grafana et UptimeRobot pour suivi temps réel des performances et alertes incidents via Teams."
       }
     },
     contact: {

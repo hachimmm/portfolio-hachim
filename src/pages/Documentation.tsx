@@ -5,6 +5,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { projectsData } from "@/data/projectsData";
 
 const Documentation = () => {
   const { projectId } = useParams();
@@ -13,8 +14,32 @@ const Documentation = () => {
   const doc = t.documentation;
   const location = useLocation();
 
-  // Mock project data - in real app, fetch based on projectId
+  const project = projectsData[projectId || 'wordpress-monitoring'];
+  
   const projectData = {
+    title: project.title[language],
+    context: project.context[language],
+    objectives: project.objectives[language],
+    challenges: project.challenges[language],
+    duration: project.duration,
+    startDate: project.startDate,
+    endDate: project.endDate,
+    team: project.team,
+    infrastructure: project.infrastructure,
+    kubernetes: project.mainTech,
+    observability: project.observability,
+    pipeline: project.pipeline,
+    iacTools: project.iacTools,
+    cicdTools: project.cicdTools,
+    securityTools: project.securityTools,
+    metrics: project.metrics.map(m => ({ label: m.label[language], value: m.value })),
+    benefits: project.benefits[language],
+    technicalValue: project.technicalValue[language],
+    technicalLearnings: project.technicalLearnings[language],
+    methodologicalLearnings: project.methodologicalLearnings[language]
+  };
+
+  const oldProjectData = {
     title: language === 'fr' ? 'Gestion Multi-Cluster Kubernetes' : 'Kubernetes Multi-Cluster Management',
     context: language === 'fr' 
       ? 'Mise en place d\'une infrastructure cloud-native complète pour gérer plusieurs clusters Kubernetes distribués géographiquement.'
