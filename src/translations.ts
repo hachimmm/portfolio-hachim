@@ -32,8 +32,8 @@ export const translations = {
         description: "Strategic migration of 10+ WordPress applications from Azure Web Apps to Azure Container Apps, improving log aggregation, scalability, and reducing operational costs by 30%."
       },
       project3: {
-        title: "WordPress Site Deployment Pipeline",
-        description: "End-to-end WordPress deployment pipeline from conception to production using Docker, Azure DevOps, and Infrastructure as Code with automated testing and blue-green deployments."
+        title: "Cloud Native DevOps Platform",
+        description: "Complete cloud-native DevOps architecture evolving through 8 phases from a monolith to a containerized solution with EKS, GitOps CI/CD pipeline, ELK Stack monitoring and automated multi-environment management."
       },
       project4: {
         title: "Infrastructure as Code with Terraform",
@@ -126,8 +126,8 @@ export const translations = {
         description: "Migration stratégique de 10+ applications WordPress d'Azure Web Apps vers Azure Container Apps, améliorant l'agrégation des logs, la scalabilité et réduisant les coûts de 30%."
       },
       project3: {
-        title: "Pipeline de Déploiement WordPress",
-        description: "Pipeline de déploiement WordPress de bout en bout, de la conception à la production avec Docker, Azure DevOps, et Infrastructure as Code avec tests automatisés et déploiements blue-green."
+        title: "Plateforme DevOps Cloud Native",
+        description: "Architecture DevOps cloud native complète évoluant en 8 phases d'un monolithe vers une solution containerisée avec EKS, pipeline CI/CD GitOps, monitoring ELK Stack et gestion multi-environnements automatisée."
       },
       project4: {
         title: "Infrastructure as Code avec Terraform",
