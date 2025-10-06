@@ -292,7 +292,6 @@ const Documentation = () => {
                       </li>
                     ))}
                   </ul>
-                  <p className="mt-4 text-sm text-muted-foreground italic">Projet réalisé en autonomie</p>
                 </div>
               </div>
             </CardContent>
