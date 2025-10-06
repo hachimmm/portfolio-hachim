@@ -12,9 +12,6 @@ export interface ProjectData {
   mainTech: string[];
   observability: string[];
   pipeline: string[];
-  iacTools: string[];
-  cicdTools: string[];
-  securityTools: string[];
   metrics: { label: { en: string; fr: string }; value: string }[];
   benefits: { en: string[]; fr: string[] };
   technicalValue: { en: string[]; fr: string[] };
@@ -96,24 +93,6 @@ export const projectsData: Record<string, ProjectData> = {
       'Environment variable management',
       'Cron job configuration at runtime',
       'Automated script deployment'
-    ],
-    iacTools: [
-      'Dockerfile modifications',
-      'Azure Container Apps configuration',
-      'Environment variables via Terraform',
-      'Build arguments (ARG) to ENV conversion'
-    ],
-    cicdTools: [
-      'Azure DevOps pipelines',
-      'Container image builds',
-      'Automated deployment',
-      'Teams webhook integration'
-    ],
-    securityTools: [
-      'WP-CLI security updates',
-      'Plugin vulnerability detection',
-      'Production-only execution',
-      'Secure webhook endpoints'
     ],
     metrics: [
       { label: { en: 'Time saved per week', fr: 'Temps gagné par semaine' }, value: '~4h' },
@@ -262,24 +241,6 @@ export const projectsData: Record<string, ProjectData> = {
       'POC validation phase',
       'Gradual rollout per application',
       'Automated rollback capability'
-    ],
-    iacTools: [
-      'Terraform for Container Apps',
-      'Azure Resource Manager templates',
-      'Infrastructure versioning',
-      'Multi-environment configurations'
-    ],
-    cicdTools: [
-      'Azure DevOps YAML pipelines',
-      'Container image builds',
-      'Automated testing in dev',
-      'Production deployment approvals'
-    ],
-    securityTools: [
-      'Azure managed identities',
-      'Network security groups',
-      'Private endpoints',
-      'Key Vault integration'
     ],
     metrics: [
       { label: { en: 'Cost reduction', fr: 'Réduction des coûts' }, value: '-30%' },
@@ -437,26 +398,6 @@ export const projectsData: Record<string, ProjectData> = {
       'Manual approval for prod',
       'Blue-green traffic switch'
     ],
-    iacTools: [
-      'Terraform (Azure provider)',
-      'Modular infrastructure code',
-      'Environment parameterization',
-      'State management in Azure Storage'
-    ],
-    cicdTools: [
-      'Azure DevOps Pipelines',
-      'YAML pipeline definitions',
-      'Multi-stage pipelines',
-      'Deployment approvals',
-      'Pipeline templates'
-    ],
-    securityTools: [
-      'SonarQube for code quality',
-      'Trivy for container scanning',
-      'Azure Key Vault for secrets',
-      'WP security plugins',
-      'SSL/TLS certificates'
-    ],
     metrics: [
       { label: { en: 'Deployment time reduction', fr: 'Réduction temps déploiement' }, value: '-70%' },
       { label: { en: 'Deployment frequency', fr: 'Fréquence déploiements' }, value: '2-3/week' },
@@ -610,27 +551,6 @@ export const projectsData: Record<string, ProjectData> = {
       'Manual approval for prod',
       'State locking mechanism',
       'Automated documentation generation'
-    ],
-    iacTools: [
-      'Terraform workspaces',
-      'Terraform modules',
-      'tfvars for environment configs',
-      'Azure Storage for state',
-      'Terraform Cloud (planned)'
-    ],
-    cicdTools: [
-      'Azure DevOps integration',
-      'Git for version control',
-      'Pull request reviews',
-      'Automated terraform plan',
-      'Deployment gates'
-    ],
-    securityTools: [
-      'Azure Key Vault integration',
-      'Service Principal authentication',
-      'Azure managed identities',
-      'tfsec for security scanning',
-      'Sensitive data encryption'
     ],
     metrics: [
       { label: { en: 'Provisioning time reduction', fr: 'Réduction temps provisioning' }, value: '-80%' },
@@ -787,27 +707,6 @@ export const projectsData: Record<string, ProjectData> = {
       'Environment gates',
       'Template reusability'
     ],
-    iacTools: [
-      'Terraform deployment stages',
-      'Infrastructure validation',
-      'State management',
-      'Automated terraform apply'
-    ],
-    cicdTools: [
-      'Azure DevOps Pipelines',
-      'YAML pipeline templates',
-      'Variable groups',
-      'Service connections',
-      'Pipeline libraries',
-      'GitHub Actions (planned)'
-    ],
-    securityTools: [
-      'SonarQube code analysis',
-      'Checkmarx SAST scanning',
-      'Trivy container scanning',
-      'Dependency vulnerability checking',
-      'GitHub Advanced Security (planned)'
-    ],
     metrics: [
       { label: { en: 'Deployment frequency', fr: 'Fréquence déploiements' }, value: '50+/week' },
       { label: { en: 'Build time', fr: 'Temps de build' }, value: '< 5min' },
@@ -962,23 +861,6 @@ export const projectsData: Record<string, ProjectData> = {
       'Index pattern management',
       'Dashboard as code',
       'Alert rule configuration'
-    ],
-    iacTools: [
-      'Terraform for ELK infrastructure',
-      'Dashboard provisioning',
-      'Alert rule automation',
-      'Index template management'
-    ],
-    cicdTools: [
-      'Automated dashboard deployment',
-      'Configuration version control',
-      'Testing monitoring queries'
-    ],
-    securityTools: [
-      'Elasticsearch security features',
-      'Role-based access control',
-      'Audit logging',
-      'Encrypted communications'
     ],
     metrics: [
       { label: { en: 'Logs ingested daily', fr: 'Logs ingérés quotidiennement' }, value: '50M+' },

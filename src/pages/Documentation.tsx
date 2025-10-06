@@ -29,9 +29,6 @@ const Documentation = () => {
     kubernetes: project.mainTech,
     observability: project.observability,
     pipeline: project.pipeline,
-    iacTools: project.iacTools,
-    cicdTools: project.cicdTools,
-    securityTools: project.securityTools,
     metrics: project.metrics.map(m => ({ label: m.label[language], value: m.value })),
     benefits: project.benefits[language],
     technicalValue: project.technicalValue[language],
@@ -168,14 +165,6 @@ const Documentation = () => {
                 className="relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300"
               >
                 {doc.architecture}
-              </Button>
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                onClick={() => scrollToSection('technologies')}
-                className="relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-primary after:transition-all after:duration-300"
-              >
-                {doc.technologies}
               </Button>
               <Button 
                 variant="ghost" 
@@ -402,75 +391,6 @@ const Documentation = () => {
           </div>
         </section>
 
-        {/* Technologies Section */}
-        <section id="technologies" className="mb-20 scroll-mt-24 animate-fade-in">
-          <div className="flex items-center gap-3 mb-8 group">
-            <div className="p-2 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors group-hover:-rotate-3 transition-transform">
-              <Code2 className="w-6 h-6 text-primary" />
-            </div>
-            <h2 className="text-3xl font-bold text-foreground">{doc.technologies}</h2>
-            <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="group hover:shadow-glow transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary/50">
-              <CardContent className="pt-6">
-                <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center gap-2">
-                  <div className="w-6 h-6 rounded bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-xs">🏗️</span>
-                  </div>
-                  {doc.iac}
-                </h3>
-                <ul className="space-y-3">
-                  {projectData.iacTools.map((tool, idx) => (
-                    <li key={idx} className="flex items-start gap-2 hover:translate-x-1 transition-transform">
-                      <span className="text-primary mt-1">▸</span>
-                      <span className="text-muted-foreground text-sm hover:text-foreground transition-colors">{tool}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-glow transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-accent/50">
-              <CardContent className="pt-6">
-                <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center gap-2">
-                  <div className="w-6 h-6 rounded bg-accent/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-xs">🔄</span>
-                  </div>
-                  {doc.cicdGitOps}
-                </h3>
-                <ul className="space-y-3">
-                  {projectData.cicdTools.map((tool, idx) => (
-                    <li key={idx} className="flex items-start gap-2 hover:translate-x-1 transition-transform">
-                      <span className="text-accent mt-1">▸</span>
-                      <span className="text-muted-foreground text-sm hover:text-foreground transition-colors">{tool}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="group hover:shadow-glow transition-all duration-300 hover:-translate-y-1 border-l-4 border-l-primary/50">
-              <CardContent className="pt-6">
-                <h3 className="text-lg font-semibold mb-4 text-foreground flex items-center gap-2">
-                  <div className="w-6 h-6 rounded bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <span className="text-xs">🔒</span>
-                  </div>
-                  {doc.securityTools}
-                </h3>
-                <ul className="space-y-3">
-                  {projectData.securityTools.map((tool, idx) => (
-                    <li key={idx} className="flex items-start gap-2 hover:translate-x-1 transition-transform">
-                      <span className="text-primary mt-1">▸</span>
-                      <span className="text-muted-foreground text-sm hover:text-foreground transition-colors">{tool}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
 
         {/* Results & Impact Section */}
         <section id="results" className="mb-20 scroll-mt-24 animate-fade-in">
