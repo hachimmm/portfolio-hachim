@@ -1,7 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
@@ -103,20 +103,11 @@ const Projects = () => {
                     </Badge>
                   ))}
                 </div>
-                <div className="flex gap-3 pt-4 border-t border-border/50">
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="gap-2 flex-1 hover:border-primary/50 transition-all duration-300"
-                    onClick={() => window.open("#", "_blank")}
-                  >
-                    <Github className="w-4 h-4" />
-                    {t.code}
-                  </Button>
-                  <Link to={`/documentation/${project.id}`} className="flex-1">
+                <div className="flex justify-center pt-4 border-t border-border/50">
+                  <Link to={`/documentation/${project.id}`}>
                     <Button 
                       size="sm" 
-                      className="gap-2 w-full bg-gradient-primary hover:opacity-90 transition-opacity duration-300"
+                      className="gap-2 bg-gradient-primary hover:opacity-90 transition-opacity duration-300"
                     >
                       <ExternalLink className="w-4 h-4" />
                       {t.demo}
