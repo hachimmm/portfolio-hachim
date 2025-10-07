@@ -27,7 +27,8 @@ const Documentation = () => {
   const architectureImages: Record<string, string> = {
     'wordpress-monitoring': `${import.meta.env.BASE_URL}archi_doc_surveillance_wp.png`,
     'azure-migration': `${import.meta.env.BASE_URL}archi_doc_migration.png`,
-    'wordpress-pipeline': `${import.meta.env.BASE_URL}archi_doc_aws.png`
+    'wordpress-pipeline': `${import.meta.env.BASE_URL}archi_doc_aws.png`,
+    'terraform-iac': `${import.meta.env.BASE_URL}archi_doc_go.png`
   };
   
   const currentArchImage = architectureImages[projectId || 'wordpress-monitoring'];
