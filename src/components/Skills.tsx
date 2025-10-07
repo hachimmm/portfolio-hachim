@@ -44,7 +44,7 @@ const Skills = () => {
     {
       icon: Cloud,
       title: t.cloudPlatforms,
-      items: ["AWS", "Azure", "Google Cloud", "DigitalOcean"],
+      items: ["AWS", "Azure"],
     },
     {
       icon: Container,
