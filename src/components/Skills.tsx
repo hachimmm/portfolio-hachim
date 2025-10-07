@@ -64,7 +64,7 @@ const Skills = () => {
     {
       icon: Server,
       title: t.monitoring,
-      items: ["Prometheus", "Grafana", "ELK Stack", "Datadog"],
+      items: ["Prometheus", "Grafana", "ELK Stack"],
     },
     {
       icon: Shield,
