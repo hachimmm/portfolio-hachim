@@ -54,7 +54,7 @@ const Skills = () => {
     {
       icon: GitBranch,
       title: t.cicd,
-      items: ["Jenkins", "GitLab CI", "GitHub Actions", "ArgoCD"],
+      items: ["GitLab CI", "GitHub Actions", "ArgoCD"],
     },
     {
       icon: Workflow,
