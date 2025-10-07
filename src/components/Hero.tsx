@@ -18,7 +18,7 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background/70 backdrop-blur-sm" />
       </div>
 
       {/* Animated gradient orbs */}
