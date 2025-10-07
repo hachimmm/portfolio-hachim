@@ -59,7 +59,7 @@ const Skills = () => {
     {
       icon: Workflow,
       title: t.iac,
-      items: ["Terraform", "Ansible", "CloudFormation", "Pulumi"],
+      items: ["Terraform", "Ansible"],
     },
     {
       icon: Server,
