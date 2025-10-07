@@ -39,7 +39,7 @@ const Projects = () => {
       id: "terraform-iac",
       title: t.project4.title,
       description: t.project4.description,
-      tags: ["Terraform", "Azure", "IaC", "HCL", "Container Apps"],
+      tags: ["Golang", "Cobra", "PocketBase", "JWT", "Docker"],
       github: "#",
       live: "#",
     },
