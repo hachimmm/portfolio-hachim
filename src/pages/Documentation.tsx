@@ -1,11 +1,13 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Clock, Users, Target, Code2, Server, Eye, GitBranch, Shield, TrendingUp, Lightbulb } from "lucide-react";
+import { ArrowLeft, Clock, Users, Target, Code2, Server, Eye, GitBranch, Shield, TrendingUp, Lightbulb, Expand } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { projectsData } from "@/data/projectsData";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from "react";
 
 const Documentation = () => {
   const { projectId } = useParams();
@@ -13,8 +15,18 @@ const Documentation = () => {
   const t = translations[language];
   const doc = t.documentation;
   const location = useLocation();
+  const [openImageDialog, setOpenImageDialog] = useState(false);
 
   const project = projectsData[projectId || 'wordpress-monitoring'];
+  
+  // Mapping des images d'architecture par projet
+  const architectureImages: Record<string, string> = {
+    'wordpress-monitoring': '/archi_doc_surveillance_wp.png',
+    'azure-migration': '/archi_doc_migration.png',
+    'wordpress-pipeline': '/archi_doc_aws.png'
+  };
+  
+  const currentArchImage = architectureImages[projectId || 'wordpress-monitoring'];
   
   const projectData = {
     title: project.title[language],
@@ -307,6 +319,40 @@ const Documentation = () => {
             <h2 className="text-3xl font-bold text-foreground">{doc.architecture}</h2>
             <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
           </div>
+
+          {/* Architecture Diagram */}
+          {currentArchImage && (
+            <Card className="mb-6 overflow-hidden group hover:shadow-glow transition-all duration-300">
+              <CardContent className="p-0">
+                <Dialog open={openImageDialog} onOpenChange={setOpenImageDialog}>
+                  <DialogTrigger asChild>
+                    <div className="relative cursor-pointer">
+                      <img 
+                        src={currentArchImage} 
+                        alt={`${projectData.title} - Architecture`}
+                        className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
+                      />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 flex items-center justify-center">
+                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-primary/90 rounded-full p-4">
+                          <Expand className="w-8 h-8 text-white" />
+                        </div>
+                      </div>
+                      <div className="absolute bottom-4 right-4 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full text-sm text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {language === 'fr' ? 'Cliquer pour agrandir' : 'Click to enlarge'}
+                      </div>
+                    </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-[90vw] max-h-[90vh] p-2">
+                    <img 
+                      src={currentArchImage} 
+                      alt={`${projectData.title} - Architecture`}
+                      className="w-full h-full object-contain"
+                    />
+                  </DialogContent>
+                </Dialog>
+              </CardContent>
+            </Card>
+          )}
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="group hover:shadow-glow transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
