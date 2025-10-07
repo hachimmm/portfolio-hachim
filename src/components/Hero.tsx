@@ -18,40 +18,51 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/85 to-background/95 backdrop-blur-sm" />
       </div>
 
+      {/* Animated gradient orbs */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse-glow animation-delay-1000" />
+
       {/* Content */}
-      <div className="container relative z-10 px-4 py-20 animate-fade-in">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold">
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
+      <div className="container relative z-10 px-4 py-20">
+        <div className="max-w-5xl mx-auto text-center space-y-10">
+          <div className="space-y-6 animate-fade-in">
+            <div className="inline-block mb-4">
+              <span className="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium animate-slide-in-left">
+                DevOps Engineer
+              </span>
+            </div>
+            <h1 className="text-6xl md:text-8xl font-bold font-heading tracking-tight">
+              <span className="text-gradient animate-shimmer bg-[length:200%_auto]" style={{
+                backgroundImage: 'linear-gradient(90deg, hsl(199 89% 48%), hsl(270 90% 55%), hsl(199 89% 48%))'
+              }}>
                 Hachim ASSOUMANI
               </span>
             </h1>
-            <h2 className="text-3xl md:text-4xl font-semibold text-foreground">
+            <h2 className="text-2xl md:text-3xl font-semibold text-foreground/90 animate-slide-in-right">
               {t.title}
             </h2>
-            <p className="text-xl md:text-2xl text-muted-foreground">
+            <p className="text-xl md:text-2xl text-muted-foreground font-light">
               {t.subtitle}
             </p>
           </div>
 
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto leading-relaxed animate-fade-in animation-delay-200">
             {t.description}
           </p>
 
-          <div className="flex flex-wrap gap-4 justify-center pt-4">
-            <Button size="lg" className="gap-2 shadow-glow hover:scale-105 transition-transform">
+          <div className="flex flex-wrap gap-4 justify-center pt-6 animate-fade-in animation-delay-400">
+            <Button size="lg" className="gap-2 bg-gradient-primary hover:opacity-90 glow-effect hover-lift font-medium px-8">
               <Mail className="w-5 h-5" />
               {t.getInTouch}
             </Button>
-            <Button variant="secondary" size="lg" className="gap-2 hover:scale-105 transition-transform">
+            <Button variant="outline" size="lg" className="gap-2 hover-lift backdrop-blur-sm bg-card/30 border-primary/30 hover:border-primary/50 font-medium px-8">
               <Github className="w-5 h-5" />
               {t.github}
             </Button>
-            <Button variant="secondary" size="lg" className="gap-2 hover:scale-105 transition-transform">
+            <Button variant="outline" size="lg" className="gap-2 hover-lift backdrop-blur-sm bg-card/30 border-primary/30 hover:border-primary/50 font-medium px-8">
               <Linkedin className="w-5 h-5" />
               {t.linkedin}
             </Button>
@@ -60,9 +71,9 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center p-2">
-          <div className="w-1 h-3 bg-primary rounded-full animate-pulse" />
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+        <div className="w-6 h-10 border-2 border-primary/50 rounded-full flex justify-center p-2 backdrop-blur-sm bg-card/20">
+          <div className="w-1 h-3 bg-gradient-primary rounded-full animate-pulse" />
         </div>
       </div>
     </section>

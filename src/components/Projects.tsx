@@ -62,15 +62,23 @@ const Projects = () => {
   ];
 
   return (
-    <section className="py-20 px-4">
-      <div className="container mx-auto">
-        <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
+    <section className="py-24 px-4 relative overflow-hidden">
+      {/* Background gradient orb */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+      
+      <div className="container mx-auto relative z-10">
+        <div className="text-center mb-20 animate-slide-up">
+          <div className="inline-block mb-4">
+            <span className="px-4 py-2 rounded-full bg-accent/10 border border-accent/20 text-accent text-sm font-medium">
+              Portfolio
+            </span>
+          </div>
+          <h2 className="text-5xl md:text-6xl font-bold font-heading mb-6">
+            <span className="text-gradient">
               {t.title}
             </span>
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             {t.subtitle}
           </p>
         </div>
@@ -79,35 +87,40 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={project.id}
-              className="group bg-card/50 backdrop-blur-sm border-border hover:border-primary/50 transition-all duration-500 hover:shadow-glow hover:-translate-y-2 flex flex-col animate-fade-in overflow-hidden"
+              className="group card-glass hover:border-primary/50 transition-all duration-500 hover-lift flex flex-col overflow-hidden relative"
               style={{ animationDelay: `${index * 100}ms` }}
             >
+              {/* Top gradient line */}
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-              <CardHeader>
-                <CardTitle className="text-foreground text-xl font-bold group-hover:text-primary transition-colors duration-300">
+              
+              {/* Background gradient on hover */}
+              <div className="absolute inset-0 bg-gradient-accent opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+              
+              <CardHeader className="relative z-10">
+                <CardTitle className="text-foreground text-xl font-bold font-heading group-hover:text-gradient transition-all duration-300">
                   {project.title}
                 </CardTitle>
                 <CardDescription className="text-muted-foreground text-sm leading-relaxed line-clamp-3">
                   {project.description}
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex-1 flex flex-col justify-between space-y-6 pt-2">
+              <CardContent className="flex-1 flex flex-col justify-between space-y-6 pt-2 relative z-10">
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
                     <Badge 
                       key={tag} 
                       variant="secondary" 
-                      className="text-xs font-medium px-3 py-1 rounded-full bg-secondary/50 hover:bg-secondary transition-colors duration-200"
+                      className="text-xs font-medium px-3 py-1 rounded-full bg-secondary/50 backdrop-blur-sm hover:bg-secondary/70 border border-primary/10 hover:border-primary/30 transition-all duration-200"
                     >
                       {tag}
                     </Badge>
                   ))}
                 </div>
-                <div className="flex justify-center pt-4 border-t border-border/50">
+                <div className="flex justify-center pt-4 border-t border-border/30">
                   <Link to={`/documentation/${project.id}`}>
                     <Button 
                       size="sm" 
-                      className="gap-2 bg-gradient-primary hover:opacity-90 transition-opacity duration-300"
+                      className="gap-2 bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-glow font-medium"
                     >
                       <ExternalLink className="w-4 h-4" />
                       {t.demo}
