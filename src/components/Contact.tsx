@@ -9,7 +9,7 @@ const Contact = () => {
   const t = translations[language].contact;
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section id="contact" className="py-24 px-4 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-card/20 via-background to-background pointer-events-none" />
       

@@ -54,7 +54,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center pt-6 animate-fade-in animation-delay-400">
-            <Button size="lg" className="gap-2 bg-gradient-primary hover:opacity-90 glow-effect hover-lift font-medium px-8">
+            <Button 
+              size="lg" 
+              className="gap-2 bg-gradient-primary hover:opacity-90 glow-effect hover-lift font-medium px-8"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               <Mail className="w-5 h-5" />
               {t.getInTouch}
             </Button>
