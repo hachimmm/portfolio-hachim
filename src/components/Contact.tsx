@@ -78,8 +78,14 @@ const Contact = () => {
             </div>
 
             <div className="mt-8 text-center">
-              <Button size="lg" className="bg-gradient-primary hover:opacity-90 glow-effect hover-lift font-medium px-8">
-                {t.downloadResume}
+              <Button size="lg" className="bg-gradient-primary hover:opacity-90 glow-effect hover-lift font-medium px-8" asChild>
+                <a 
+                  href={language === 'fr' ? 'https://hachim-devops.github.io/mon-cv/cv.pdf' : 'https://hachim-devops.github.io/mon-cv/cv_en.pdf'} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  {t.downloadResume}
+                </a>
               </Button>
             </div>
           </CardContent>
