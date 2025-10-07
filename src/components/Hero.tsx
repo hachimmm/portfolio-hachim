@@ -66,9 +66,11 @@ const Hero = () => {
               <Github className="w-5 h-5" />
               {t.github}
             </Button>
-            <Button variant="outline" size="lg" className="gap-2 hover-lift backdrop-blur-sm bg-card/30 border-primary/30 hover:border-primary/50 font-medium px-8">
-              <Linkedin className="w-5 h-5" />
-              {t.linkedin}
+            <Button variant="outline" size="lg" className="gap-2 hover-lift backdrop-blur-sm bg-card/30 border-primary/30 hover:border-primary/50 font-medium px-8" asChild>
+              <a href="https://www.linkedin.com/in/hachim-assoumani-957168293/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5" />
+                {t.linkedin}
+              </a>
             </Button>
           </div>
         </div>
