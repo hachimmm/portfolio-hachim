@@ -36,8 +36,8 @@ export const translations = {
         description: "Complete cloud-native DevOps architecture evolving through 8 phases from a monolith to a containerized solution with EKS, GitOps CI/CD pipeline, ELK Stack monitoring and automated multi-environment management."
       },
       project4: {
-        title: "Infrastructure as Code with Terraform",
-        description: "Complete Azure infrastructure automation using Terraform for multi-environment deployments (dev, staging, prod), managing Container Apps, databases, storage, and networking."
+        title: "Mamba CLI - Authentication Interface",
+        description: "Command-line interface developed in Go for integrating modern authentication solutions with PocketBase. Complete user management, permissions, and JWT tokens with robust and secure architecture."
       },
       project5: {
         title: "CI/CD Pipeline with Azure DevOps",
@@ -130,8 +130,8 @@ export const translations = {
         description: "Architecture DevOps cloud native complète évoluant en 8 phases d'un monolithe vers une solution containerisée avec EKS, pipeline CI/CD GitOps, monitoring ELK Stack et gestion multi-environnements automatisée."
       },
       project4: {
-        title: "Infrastructure as Code avec Terraform",
-        description: "Automatisation complète de l'infrastructure Azure avec Terraform pour déploiements multi-environnements (dev, staging, prod), gérant Container Apps, bases de données, stockage et réseau."
+        title: "Mamba CLI - Interface d'Authentification",
+        description: "Interface en ligne de commande développée en Go pour l'intégration de solutions d'authentification modernes avec PocketBase. Gestion complète des utilisateurs, permissions et tokens JWT avec architecture robuste et sécurisée."
       },
       project5: {
         title: "Pipeline CI/CD avec Azure DevOps",

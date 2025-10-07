@@ -465,153 +465,147 @@ export const projectsData: Record<string, ProjectData> = {
   'terraform-iac': {
     id: 'terraform-iac',
     title: {
-      en: 'Infrastructure as Code with Terraform',
-      fr: 'Infrastructure as Code avec Terraform'
+      en: 'Mamba CLI - Authentication Interface',
+      fr: 'Mamba CLI - Interface d\'Authentification'
     },
     context: {
-      en: 'Complete Azure infrastructure automation using Terraform for multi-environment deployments. Manages Container Apps, databases, storage, networking, and security. Eliminates manual Azure Portal operations, ensures consistency, and accelerates deployment cycles.',
-      fr: 'Automatisation complète de l\'infrastructure Azure avec Terraform pour déploiements multi-environnements. Gère Container Apps, bases de données, stockage, réseau et sécurité. Élimine les opérations manuelles sur le Portail Azure, garantit la cohérence et accélère les cycles de déploiement.'
+      en: 'Command-line interface developed in Go for integrating modern authentication solutions with PocketBase. Complete user management, permissions, and JWT tokens with robust and secure architecture.',
+      fr: 'Interface en ligne de commande développée en Go pour l\'intégration de solutions d\'authentification modernes avec PocketBase. Gestion complète des utilisateurs, permissions et tokens JWT avec une architecture robuste et sécurisée.'
     },
     objectives: {
       en: [
-        'Automate entire Azure infrastructure provisioning',
-        'Enable multi-environment deployments (dev/staging/prod)',
-        'Version control infrastructure changes',
-        'Reduce provisioning time by 80%',
-        'Eliminate manual configuration errors',
-        'Enable infrastructure reusability'
+        'Create users and administrators with role management',
+        'Secure authentication system with JWT tokens',
+        'Granular permission management (CRUD, consultation, search)',
+        'Intuitive CLI interface with Cobra framework',
+        'Scalable architecture with Docker containerization',
+        'REST API integration with PocketBase as backend'
       ],
       fr: [
-        'Automatiser le provisioning complet de l\'infrastructure Azure',
-        'Activer déploiements multi-environnements (dev/staging/prod)',
-        'Versionner les changements d\'infrastructure',
-        'Réduire temps de provisioning de 80%',
-        'Éliminer erreurs de configuration manuelle',
-        'Activer réutilisabilité de l\'infrastructure'
+        'Création d\'utilisateurs et d\'administrateurs avec gestion des rôles',
+        'Système d\'authentification sécurisé avec tokens JWT',
+        'Gestion granulaire des permissions (CRUD, consultation, recherche)',
+        'Interface CLI intuitive avec framework Cobra',
+        'Architecture scalable avec containerisation Docker',
+        'Intégration API REST avec PocketBase comme backend'
       ]
     },
     challenges: {
       en: [
-        'Learning Terraform from scratch',
-        'State management across teams',
-        'Managing secrets securely',
-        'Handling Azure provider complexity',
-        'Environment-specific configurations',
-        'Dependency management between resources'
+        'Secure token management: JWT storage and rotation system implementation',
+        'Permission architecture: Flexible role model design (super_user, user)',
+        'Validation and security: Error handling and user input validation',
+        'CLI user interface: Creating fluid user experience with Cobra',
+        'Complete containerization: Multi-service deployment with Docker Compose'
       ],
       fr: [
-        'Apprentissage Terraform from scratch',
-        'Gestion du state entre équipes',
-        'Gestion sécurisée des secrets',
-        'Gestion de la complexité du provider Azure',
-        'Configurations spécifiques par environnement',
-        'Gestion des dépendances entre ressources'
+        'Gestion sécurisée des tokens : Implémentation d\'un système de stockage et rotation des JWT',
+        'Architecture de permissions : Conception d\'un modèle de rôles flexible (super_user, user)',
+        'Validation et sécurité : Gestion des erreurs et validation des entrées utilisateur',
+        'Interface utilisateur CLI : Création d\'une expérience utilisateur fluide avec Cobra',
+        'Containerisation complète : Déploiement multi-services avec Docker Compose'
       ]
     },
-    duration: 'Continu',
-    startDate: '09/2023',
-    endDate: 'En cours',
+    duration: '3 semaines',
+    startDate: '09/2024',
+    endDate: '10/2024',
     team: [
-      { role: 'DevOps Engineers', count: '3' },
-      { role: 'Cloud Architect', count: '1' },
-      { role: 'Security Engineer', count: '1' }
+      { role: 'Principal Developer', count: '1' },
+      { role: 'Academic Project', count: 'M1 DevOps' }
     ],
     infrastructure: [
-      'Azure Container Apps',
-      'Azure MySQL Flexible Server',
-      'Azure Storage Accounts',
-      'Azure Virtual Networks',
-      'Azure Application Gateway',
-      'Azure Key Vault'
+      'Docker multi-service containerization',
+      'mamba-cli main container with Go executable',
+      'PocketBase authentication service and database',
+      'Persistent volumes for user data storage',
+      'Internal network for secure communication'
     ],
     mainTech: [
-      'Terraform (Azure provider)',
-      'HCL (HashiCorp Configuration Language)',
-      'Azure CLI',
-      'Terraform modules',
-      'Remote state management'
+      'Golang for performance and simplicity',
+      'Cobra CLI framework for optimal user interface',
+      'PocketBase as Backend-as-a-Service',
+      'SQLite embedded database via PocketBase',
+      'Docker Compose for multi-service orchestration'
     ],
     observability: [
-      'Terraform plan outputs',
-      'Azure Resource Graph queries',
-      'Cost management dashboards',
-      'Change tracking and audit logs'
+      'CLI command logging',
+      'API request tracking',
+      'Authentication event monitoring',
+      'Container logs via Docker'
     ],
     pipeline: [
-      'Terraform init/plan/apply workflow',
-      'Automated validation',
-      'Manual approval for prod',
-      'State locking mechanism',
-      'Automated documentation generation'
+      'Docker multi-stage builds',
+      'Automated testing with dockerized environment',
+      'Auto-generated CLI documentation',
+      'Alpine Linux lightweight images'
     ],
     metrics: [
-      { label: { en: 'Provisioning time reduction', fr: 'Réduction temps provisioning' }, value: '-80%' },
-      { label: { en: 'Configuration errors', fr: 'Erreurs de configuration' }, value: '-90%' },
-      { label: { en: 'Resources managed', fr: 'Ressources gérées' }, value: '200+' },
-      { label: { en: 'Environments', fr: 'Environnements' }, value: '15+' }
+      { label: { en: 'CLI commands implemented', fr: 'Commandes CLI implémentées' }, value: '25+' },
+      { label: { en: 'Granular permissions', fr: 'Permissions granulaires' }, value: '5' },
+      { label: { en: 'User roles', fr: 'Rôles utilisateur' }, value: '2' }
     ],
     benefits: {
       en: [
-        'Reproducible infrastructure',
-        'Version-controlled changes',
-        'Rapid environment creation',
-        'Consistent configurations',
-        'Disaster recovery capability',
-        'Cost optimization tracking'
+        'Automation of authentication processes',
+        'Enhanced security with JWT, password hashing, and granular access control',
+        'Scalability through containerized architecture',
+        'Developer experience with complete documentation and auto-generated CLI',
+        'Complete CRUD: Admin and user management with roles',
+        'Secure password reset system via email with temporary tokens'
       ],
       fr: [
-        'Infrastructure reproductible',
-        'Changements versionnés',
-        'Création rapide d\'environnements',
-        'Configurations cohérentes',
-        'Capacité de disaster recovery',
-        'Suivi optimisation coûts'
+        'Automatisation des processus d\'authentification',
+        'Sécurité renforcée avec JWT, hachage des mots de passe et contrôle d\'accès granulaire',
+        'Scalabilité grâce à l\'architecture containerisée',
+        'Expérience développeur avec documentation complète et CLI auto-générée',
+        'CRUD complet : Gestion des administrateurs et utilisateurs avec rôles',
+        'Système de réinitialisation de mot de passe sécurisé par email avec tokens temporaires'
       ]
     },
     technicalValue: {
       en: [
-        'IaC maturity and best practices',
-        'Declarative infrastructure approach',
-        'Module reusability patterns',
-        'Multi-cloud capability (extensible)'
+        'Modern CLI development patterns',
+        'Secure authentication architecture',
+        'Containerized microservices approach',
+        'API-first design principles'
       ],
       fr: [
-        'Maturité IaC et meilleures pratiques',
-        'Approche déclarative de l\'infrastructure',
-        'Patterns de réutilisabilité modules',
-        'Capacité multi-cloud (extensible)'
+        'Patterns de développement CLI modernes',
+        'Architecture d\'authentification sécurisée',
+        'Approche microservices containerisée',
+        'Principes de conception API-first'
       ]
     },
     technicalLearnings: {
       en: [
-        'Terraform language and workflow',
-        'Azure resource management',
-        'State management strategies',
-        'Module design patterns',
-        'Dependency graph understanding'
+        'Mastery of Go ecosystem and advanced Cobra usage for professional CLIs',
+        'Security architecture: Deep understanding of JWT, RBAC, and authentication best practices',
+        'Integration testing with dockerized environment for complete workflow validation',
+        'Technical documentation: Importance of user and technical docs for CLI tool adoption',
+        'Layered architecture: Clear separation of concerns for maintainability and testability'
       ],
       fr: [
-        'Langage et workflow Terraform',
-        'Gestion des ressources Azure',
-        'Stratégies de gestion du state',
-        'Patterns de conception de modules',
-        'Compréhension graphe de dépendances'
+        'Maîtrise de l\'écosystème Go et utilisation avancée de Cobra pour des CLI professionnelles',
+        'Architecture de sécurité : Compréhension approfondie des mécanismes JWT, RBAC et bonnes pratiques',
+        'Integration testing : Tests d\'intégration avec environnement dockerisé pour validation complète',
+        'Documentation technique : Importance de la documentation utilisateur et technique pour l\'adoption',
+        'Architecture en couches : Séparation claire des responsabilités pour maintenabilité et testabilité'
       ]
     },
     methodologicalLearnings: {
       en: [
-        'Infrastructure as Code philosophy',
-        'Immutable infrastructure concept',
-        'Change management process',
-        'Documentation as code practice',
-        'Continuous infrastructure improvement'
+        'Academic project management within M1 DevOps curriculum',
+        'Individual project execution and self-organization',
+        'CLI/UX design principles for developer tools',
+        'Iterative development with continuous testing',
+        'Security-first development approach'
       ],
       fr: [
-        'Philosophie Infrastructure as Code',
-        'Concept d\'infrastructure immutable',
-        'Processus de gestion du changement',
-        'Pratique documentation as code',
-        'Amélioration continue infrastructure'
+        'Gestion de projet académique dans le cursus M1 DevOps',
+        'Exécution de projet individuel et auto-organisation',
+        'Principes de design CLI/UX pour outils développeur',
+        'Développement itératif avec tests continus',
+        'Approche de développement security-first'
       ]
     }
   },
