@@ -21,9 +21,9 @@ const Documentation = () => {
   
   // Mapping des images d'architecture par projet
   const architectureImages: Record<string, string> = {
-    'wordpress-monitoring': '/archi_doc_surveillance_wp.png',
-    'azure-migration': '/archi_doc_migration.png',
-    'wordpress-pipeline': '/archi_doc_aws.png'
+    'wordpress-monitoring': `${import.meta.env.BASE_URL}archi_doc_surveillance_wp.png`,
+    'azure-migration': `${import.meta.env.BASE_URL}archi_doc_migration.png`,
+    'wordpress-pipeline': `${import.meta.env.BASE_URL}archi_doc_aws.png`
   };
   
   const currentArchImage = architectureImages[projectId || 'wordpress-monitoring'];
