@@ -7,7 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { projectsData } from "@/data/projectsData";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Documentation = () => {
   const { projectId } = useParams();
@@ -16,6 +16,10 @@ const Documentation = () => {
   const doc = t.documentation;
   const location = useLocation();
   const [openImageDialog, setOpenImageDialog] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [projectId]);
 
   const project = projectsData[projectId || 'wordpress-monitoring'];
   
