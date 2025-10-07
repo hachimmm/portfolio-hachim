@@ -1,40 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Server, Cloud, Container, GitBranch, Shield, Workflow } from "lucide-react";
+import { Server, Cloud, Container, GitBranch, Shield, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { translations } from "@/translations";
-
-const skillsData = [
-  {
-    icon: Cloud,
-    title: "Cloud Platforms",
-    items: ["AWS", "Azure", "Google Cloud", "DigitalOcean"],
-  },
-  {
-    icon: Container,
-    title: "Containerization",
-    items: ["Docker", "Kubernetes", "Helm", "Docker Compose"],
-  },
-  {
-    icon: GitBranch,
-    title: "CI/CD",
-    items: ["Jenkins", "GitLab CI", "GitHub Actions", "ArgoCD"],
-  },
-  {
-    icon: Workflow,
-    title: "Infrastructure as Code",
-    items: ["Terraform", "Ansible", "CloudFormation", "Pulumi"],
-  },
-  {
-    icon: Server,
-    title: "Monitoring & Logging",
-    items: ["Prometheus", "Grafana", "ELK Stack", "Datadog"],
-  },
-  {
-    icon: Shield,
-    title: "Security & Tools",
-    items: ["Vault", "SonarQube", "Trivy", "OWASP"],
-  },
-];
 
 const Skills = () => {
   const { language } = useLanguage();
@@ -43,8 +10,8 @@ const Skills = () => {
   const skills = [
     {
       icon: Cloud,
-      title: t.cloudPlatforms,
-      items: ["AWS", "Azure"],
+      title: t.cloudIac,
+      items: ["AWS", "Azure", "Terraform", "Ansible"],
     },
     {
       icon: Container,
@@ -57,11 +24,6 @@ const Skills = () => {
       items: ["GitLab CI", "GitHub Actions", "ArgoCD"],
     },
     {
-      icon: Workflow,
-      title: t.iac,
-      items: ["Terraform", "Ansible"],
-    },
-    {
       icon: Server,
       title: t.monitoring,
       items: ["Prometheus", "Grafana", "ELK Stack"],
@@ -70,6 +32,11 @@ const Skills = () => {
       icon: Shield,
       title: t.security,
       items: ["Vault", "SonarQube", "Trivy", "OWASP"],
+    },
+    {
+      icon: Users,
+      title: t.softSkills,
+      items: ["Méthodes Agiles", "CALMS", "SAFe"],
     },
   ];
 

@@ -11,12 +11,12 @@ export const translations = {
     skills: {
       title: "Skills & Technologies",
       subtitle: "Tools and platforms I work with daily",
-      cloudPlatforms: "Cloud Platforms",
+      cloudIac: "Cloud & IaC",
       containerization: "Containerization",
       cicd: "CI/CD",
-      iac: "Infrastructure as Code",
       monitoring: "Monitoring & Logging",
-      security: "Security & Tools"
+      security: "Security & Tools",
+      softSkills: "Soft Skills"
     },
     projects: {
       title: "Featured Projects",
@@ -105,12 +105,12 @@ export const translations = {
     skills: {
       title: "Compétences & Technologies",
       subtitle: "Outils et plateformes que j'utilise quotidiennement",
-      cloudPlatforms: "Plateformes Cloud",
+      cloudIac: "Cloud & IaC",
       containerization: "Conteneurisation",
       cicd: "CI/CD",
-      iac: "Infrastructure as Code",
       monitoring: "Surveillance & Journalisation",
-      security: "Sécurité & Outils"
+      security: "Sécurité & Outils",
+      softSkills: "Soft Skills"
     },
     projects: {
       title: "Projets Principaux",
